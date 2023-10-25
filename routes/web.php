@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admincontroller;
 use App\Http\Controllers\ErrorController;
+use App\Http\Controllers\TeamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,5 @@ Route::get('/custom-error', [ErrorController::class, 'errorMsg'])->name('custom.
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/admin', [Admincontroller::class, 'adminHome'])->name('admin.home');
-    Route::get('/team', [TeamController::class, 'store'])->name('team.us');
+    Route::get('/team', [TeamController::class, 'teamStore'])->name('team.us');
 });
