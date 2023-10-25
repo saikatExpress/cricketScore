@@ -35,5 +35,11 @@ Route::get('/custom-error', [ErrorController::class, 'errorMsg'])->name('custom.
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/admin', [Admincontroller::class, 'adminHome'])->name('admin.home');
+    // For Team
+    Route::get('/team/list', [TeamController::class, 'index'])->name('team.list');
     Route::get('/team', [TeamController::class, 'teamStore'])->name('team.us');
+    Route::post('/team/add', [TeamController::class, 'store'])->name('team.store');
+
+    // For Match
+    Route::get('/cricket/match', [MatchController::class, 'cricketMatch'])->name('cricket.match');
 });

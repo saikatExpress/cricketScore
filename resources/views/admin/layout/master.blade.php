@@ -45,12 +45,12 @@
                             <img src="{{ asset('images/logo.png') }}" alt="" />
                             <span>Focus</span></a></div>
                     <li class="label">Main</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard <span
+                    <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Match <span
                                 class="badge badge-primary">2</span> <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="index.html">Dashboard 1</a></li>
-                            <li><a href="index.html">Dashboard 2</a></li>
+                            <li><a href="{{ route('cricket.match') }}">Cricket</a></li>
+                            <li><a href="index.html">Football</a></li>
                         </ul>
                     </li>
 
@@ -59,7 +59,7 @@
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="{{ route('team.us') }}">Add Team</a></li>
-                            <li><a href="chart-morris.html">Team List</a></li>
+                            <li><a href="{{ route('team.list') }}">Team List</a></li>
                         </ul>
                     </li>
                     <li><a href="app-event-calender.html"><i class="ti-calendar"></i> Calender </a></li>
