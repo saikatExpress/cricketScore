@@ -90,7 +90,96 @@
     </header>
 
     <div class="main_body">
-        @yield('content')
+        <div class="left_side_bar">
+            <div class="main_bar">
+                <div class="search_form">
+                    <form action="">
+                        <input type="text" placeholder="Search">
+                    </form>
+                </div>
+                <div class="menu_item">
+                    <div class="m-4">
+                        <i style="font-size:14px;" class="fa-solid fa-house"></i><a
+                            style="text-decoration:none;color:#000;margin-left:15px; font-size:14px;"
+                            href="">Home</a>
+                    </div>
+
+                    <!-- Cricket Menu -->
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center m-4">
+                            <div class="d-flex align-items-center">
+                                <i style="font-size:14px;" class="fa-solid fa-bowling-ball" id="cricketIcon"></i>
+                                <a style="text-decoration:none;color:#000;margin-left:15px; font-size:14px;"
+                                    href="javascript:void(0);" onclick="toggleContent('cricket')">Cricket</a>
+                            </div>
+                            <i class="fa-solid fa-arrow-right" id="cricketArrow"></i>
+                        </div>
+                        <div style="margin-left: 50px;" class="content" id="cricketContent">
+                            <p><a href="{{ route('cricket.home') }}">Home</a></p>
+                            <p><a href="">T20 League</a></p>
+                            <p><a href="">Series</a></p>
+                            <p><a href="">International cricket scores</a></p>
+                            <p><a href="">All Cricket Scores</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Football Menu -->
+                    <div class="d-flex justify-content-between align-items-center m-4">
+                        <div class="d-flex align-items-center">
+                            <i style="font-size:14px;" class="fa-regular fa-futbol" id="footballIcon"></i>
+                            <a style="text-decoration:none;color:#000;margin-left:15px; font-size:14px;"
+                                href="javascript:void(0);" onclick="toggleContent('football')">Football</a>
+                        </div>
+                        <i class="fa-solid fa-arrow-right" id="footballArrow"></i>
+                    </div>
+                    <div style="margin-left: 50px;" class="content" id="footballContent">
+                        <p><a href="">Home</a></p>
+                        <p><a href="">Scores</a></p>
+                        <p><a href="">Premier League Scores</a></p>
+                        <p><a href="">La Liga scores</a></p>
+                        <p><a href="">Bundesliga Scores</a></p>
+                    </div>
+
+                    <!-- Kabbadi Menu -->
+                    <div class="d-flex justify-content-between align-items-center m-4">
+                        <div class="d-flex align-items-center">
+                            <i style="font-size:14px;" class="fa-regular fa-hand-point-up" id="kabbadiIcon"></i>
+                            <a style="text-decoration:none;color:#000;margin-left:15px; font-size:14px;"
+                                href="javascript:void(0);" onclick="toggleContent('kabbadi')">Kabbadi</a>
+                        </div>
+                        <i class="fa-solid fa-arrow-right" id="kabbadiArrow"></i>
+                    </div>
+                    <div style="margin-left: 50px;" class="content" id="kabbadiContent">
+                        <p><a href="">Home</a></p>
+                        <p><a href="">Scores</a></p>
+                        <p><a href="">Videos</a></p>
+                        <p><a href="">News</a></p>
+                        <p><a href="">Features</a></p>
+                    </div>
+
+                    <!-- eSport Menu -->
+                    <div class="d-flex justify-content-between align-items-center m-4">
+                        <div class="d-flex align-items-center">
+                            <i style="font-size:14px;" class="fa-solid fa-gamepad" id="eSportIcon"></i>
+                            <a style="text-decoration:none;color:#000;margin-left:15px; font-size:14px;"
+                                href="javascript:void(0);" onclick="toggleContent('eSport')">eSport</a>
+                        </div>
+                        <i class="fa-solid fa-arrow-right" id="eSportArrow"></i>
+                    </div>
+                    <div style="margin-left: 50px;" class="content" id="eSportContent">
+                        <p><a href="">Home</a></p>
+                        <p><a href="">News</a></p>
+                        <p><a href="">Features</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right_side_bar">
+            <div class="main_content">
+                @yield('content')
+            </div>
+        </div>
     </div>
 
 

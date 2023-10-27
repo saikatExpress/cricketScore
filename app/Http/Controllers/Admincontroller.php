@@ -14,4 +14,12 @@ class Admincontroller extends Controller
     public function adminHome(){
         return view('admin/dashboard');
     }
+
+    public function calenderShow() {
+        return view('admin.calender');
+    }
+
+    public function umpireAdd() : mixed {
+        return view('admin.umpire');
+    }
 }

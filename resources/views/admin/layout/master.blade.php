@@ -43,18 +43,19 @@
                 <ul>
                     <div class="logo"><a href="index.html">
                             <img src="{{ asset('images/logo.png') }}" alt="" />
-                            <span>Focus</span></a></div>
-                    <li class="label">Main</li>
+                            <span>Sports</span></a></div>
+                    <li class="label">International</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Match <span
                                 class="badge badge-primary">2</span> <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="{{ route('cricket.match') }}">Cricket</a></li>
-                            <li><a href="index.html">Football</a></li>
+                            <li><a href="index.html">Premier League</a></li>
                         </ul>
                     </li>
 
-                    <li class="label">Apps</li>
+                    <li class="label">Team</li>
+
                     <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Team <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
@@ -62,11 +63,28 @@
                             <li><a href="{{ route('team.list') }}">Team List</a></li>
                         </ul>
                     </li>
-                    <li><a href="app-event-calender.html"><i class="ti-calendar"></i> Calender </a></li>
-                    <li><a href="app-email.html"><i class="ti-email"></i> Email</a></li>
-                    <li><a href="app-profile.html"><i class="ti-user"></i> Profile</a></li>
-                    <li><a href="app-widget-card.html"><i class="ti-layout-grid2-alt"></i> Widget</a></li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Club <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="{{ route('team.us') }}">Add Club</a></li>
+                            <li><a href="{{ route('team.list') }}">Club List</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i> Tournaments <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="{{ route('tournament.us') }}">Add Tournaments</a></li>
+                            <li><a href="{{ route('team.list') }}">Tournaments List</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="{{ route('calender.us') }}"><i class="ti-calendar"></i> Calender </a></li>
+                    <li><a href="{{ route('umpire.us') }}"><i class="ti-user"></i> Umpire</a></li>
+
                     <li class="label">Features</li>
+
                     <li><a class="sidebar-sub-toggle"><i class="ti-layout"></i> UI Elements <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
@@ -144,7 +162,7 @@
                         </ul>
                     </li>
                     <li><a href="../documentation/index.html"><i class="ti-file"></i> Documentation</a></li>
-                    <li><a><i class="ti-close"></i> Logout</a></li>
+                    <li><a href="{{ route('logout.us') }}"><i class="ti-close"></i> Logout</a></li>
                 </ul>
             </div>
         </div>

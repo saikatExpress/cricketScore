@@ -24,4 +24,10 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
+
+    // If this command not run,then uncomment this
+    // protected $commands = [
+    //     // ...
+    //     \App\Console\Commands\CacheCommands::class,
+    // ];
 }
